@@ -4,6 +4,9 @@
     <TargetFramework>netcoreapp2.1</TargetFramework>
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
     <UserSecretsId>54abb132-3324-4981-b77e-3743324e9e32</UserSecretsId>
+    <EnvironmentVariables>
+      <NUGET_EXPERIMENTAL_CHAIN_BUILD_RETRY_POLICY>2,1000</NUGET_EXPERIMENTAL_CHAIN_BUILD_RETRY_POLICY>
+    </EnvironmentVariables>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
