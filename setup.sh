@@ -5,8 +5,8 @@ apiappname=ShoeCoAPI$(openssl rand -hex 5)
 printf "Setting username and password for Git ... (1/7)\n\n"
 
 
-GIT_USERNAME=gitName$Random
-GIT_EMAIL=a@b.c
+GIT_USERNAME=joe-collins323
+GIT_EMAIL=joe_collins323@yahoo.com
 
 git config --global user.name "$GIT_USERNAME"
 git config --global user.email "$GIT_EMAIL"
@@ -15,13 +15,13 @@ git config --global user.email "$GIT_EMAIL"
 RESOURCE_GROUP=$(az group list --query "[0].name" -o tsv)
 
 # Create App Service plan
-PLAN_NAME=myPlan
+PLAN_NAME=api-lab
 
 
 printf "\nCreating App Service plan in FREE tier ... (2/7)\n\n"
 
 
-az appservice plan create --name $apiappname --resource-group $RESOURCE_GROUP --sku FREE --location centralus --verbose
+az appservice plan create --name $apiappname --resource-group $RESOURCE_GROUP --sku FREE --location southcentralus --verbose
 
 printf "\nCreating API App ... (3/7)\n\n"
 
